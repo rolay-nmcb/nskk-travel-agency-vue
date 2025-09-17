@@ -6,6 +6,7 @@ import createVitePlugins from './vite/plugins'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode, command }) => {
+
   const env = loadEnv(mode, process.cwd())
   const { VITE_APP_ENV } = env
   return {
@@ -58,12 +59,6 @@ export default defineConfig(({ mode, command }) => {
       }
     }
   }
-},
-{
-  transpileDependencies: true,
-  publicPath: '/nskk-travel-agency-vue/', // 自己GitHub上的仓库名称两边 / 不能省略
-  outputDir: 'docs', // 打包输出的文件名称（不配置也可以，默认是dist）
-  assetsDir: 'static', // 静态资源（js、css等）存放路径，相对outputDir
 }
 
 )
