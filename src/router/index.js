@@ -85,12 +85,6 @@ export const constantRoutes = [
   hidden: true
   },
   {
-    path: '/nskk',
-    name: 'nskk',
-    component: () => import('@/views/home/nskk'),
-    hidden: true
-  },
-  {
     path: '',
     component: Layout,
     redirect: '/index',
